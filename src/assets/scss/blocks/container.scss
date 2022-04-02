@@ -1,9 +1,0 @@
-.container {
-  max-width: $container;
-  margin: 0 auto;
-  padding: 0 15px;
-
-  &--product {
-    max-width: calc($container + 70px);
-  }
-}
