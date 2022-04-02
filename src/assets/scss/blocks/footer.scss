@@ -1,0 +1,25 @@
+.footer {
+  padding: 70px 0 30px;
+
+  background: $dark-mainColor;
+
+  @include breakpoint(768px) {
+    padding: 70px 0 160px;
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__title {
+    color: #000;
+  }
+
+  &__scroll {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 34px;
+
+    color: #000;
+  }
+}

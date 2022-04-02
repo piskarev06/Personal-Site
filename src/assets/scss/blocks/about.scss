@@ -1,0 +1,100 @@
+.about {
+  &__inner {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 20px;
+
+    margin-bottom: 70px;
+
+    @include breakpoint(992px) {
+      flex-wrap: wrap;
+      gap: 40px;
+
+      margin-bottom: 60px;
+    }
+
+    & .cards {
+      &__item {
+        flex: 0 0 calc(50% - 10px);
+
+        padding: 25px 25px 30px;
+
+        text-align: left;
+
+        border: 3px solid $dark-mainColor;
+        border-radius: 20px;
+
+        @include breakpoint(992px) {
+          flex: 0 0 100%;
+        }
+      }
+
+      &__title {
+        position: relative;
+
+        padding-left: 95px;
+        padding-top: 30px;
+
+        font-family: 'Quicksand';
+        font-weight: 700;
+        font-size: 22px;
+
+        color: $accent;
+
+        margin-bottom: 60px;
+
+        &.dev {
+          &::before {
+            background: url('../images/about/dev.svg');
+          }
+        }
+
+        &.des {
+          &::before {
+            background: url('../images/about/design.svg');
+          }
+        }
+
+        &::before {
+          position: absolute;
+          top: calc(50% + 15px);
+          transform: translateY(-50%);
+          left: 0;
+          content: '';
+
+          width: 80px;
+          height: 80px;
+
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      &__text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__explore {
+    font-family: 'Quicksand';
+    font-weight: 600;
+
+    color: $accent;
+  }
+}
